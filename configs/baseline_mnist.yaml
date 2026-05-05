@@ -1,0 +1,58 @@
+# Configuration for baseline models comparison
+model:
+  name: "baseline"
+  architecture: "simple_cnn"  # Options: simple_cnn, resnet18, logistic_regression
+  input_channels: 1
+  num_classes: 10
+  hidden_dim: 128
+
+# Task generation (same as MAML for fair comparison)
+task:
+  n_way: 5
+  k_shot: 1
+  query_shots: 15
+  num_tasks_per_epoch: 100
+
+# Training configuration
+training:
+  epochs: 50
+  batch_size: 32
+  optimizer: "adam"
+  lr: 0.001
+  weight_decay: 1e-4
+  scheduler: "cosine"
+
+# Data configuration
+data:
+  dataset: "mnist"
+  data_dir: "./data"
+  download: true
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  normalize: true
+
+# Evaluation configuration
+evaluation:
+  eval_steps: 10
+  num_eval_tasks: 100
+  save_predictions: true
+  metrics: ["accuracy", "f1", "auroc"]
+
+# Logging and checkpointing
+logging:
+  log_dir: "./logs"
+  log_interval: 10
+  save_interval: 20
+  checkpoint_dir: "./checkpoints"
+  tensorboard: true
+
+# Device configuration
+device:
+  auto_detect: true
+  cuda: true
+  mps: true
+
+# Reproducibility
+seed: 42
+deterministic: true

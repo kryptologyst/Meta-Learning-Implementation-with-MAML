@@ -1,0 +1,40 @@
+# Core dependencies
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+scipy>=1.10.0
+tqdm>=4.65.0
+pyyaml>=6.0
+matplotlib>=3.7.0
+plotly>=5.15.0
+tensorboard>=2.13.0
+
+# Deep learning framework
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Meta-learning specific
+learn2learn>=0.1.7
+
+# Computer vision
+opencv-python>=4.8.0
+kornia>=0.7.0
+
+# Meta-learning and optimization
+optuna>=3.3.0
+ray[tune]>=2.6.0
+
+# Development and testing
+black>=23.0.0
+ruff>=0.0.280
+mypy>=1.5.0
+pytest>=7.4.0
+
+# Interactive demos
+streamlit>=1.25.0
+gradio>=3.40.0
+
+# Optional: Advanced features
+# transformers>=4.30.0  # For transformer-based meta-learning
+# wandb>=0.15.0  # For experiment tracking
