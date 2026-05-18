@@ -23,7 +23,7 @@ kornia>=0.7.0
 
 # Meta-learning and optimization
 optuna>=3.3.0
-ray[tune]>=2.6.0
+# ray[tune]>=2.6.0
 
 # Development and testing
 black>=23.0.0
